@@ -1,0 +1,79 @@
+/**
+*   Author Custom Mixins
+*/
+
+@mixin clearfix() {
+    zoom: 1;
+    &:before {
+        content: '';
+        display: block;
+    }
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin opacity($op){
+    $ie_op: $op * 100;
+    -moz-opacity: $op;
+    opacity:$op;
+    filter: alpha(opacity=$ie_op);
+}
+
+@mixin underline($height, $color, $bottom){
+    &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: $bottom;
+        height: $height;
+        width: 0%;
+        background: $color;
+        transition: width .5s ease;
+    }
+    &:hover{
+        &:after{ width:100%; background: $color; }
+    }
+}
+
+@mixin respond-to($media) {
+    @if $media == mobile {
+        @media screen and (max-width: $mobileMaxWidth) { 
+            @content; 
+        }
+    }
+    @else if $media == tablet {
+        @media screen and (min-width: $mobileMaxWidth + 1) and (max-width: $tabletMaxWidth - 1) { 
+            @content; 
+        }
+    }
+    @else if $media == mix {
+        @media screen and (max-width: $tabletMaxWidth - 1) { 
+            @content; 
+        }
+    }
+    @else if $media == desktop {
+        @media screen and (min-width: $tabletMaxWidth) { 
+            @content; 
+        }
+    }
+    @else {
+        @media screen and (max-width: $media) { 
+            @content; 
+        }
+    }
+}
+
+
+@mixin retina($url, $retinaUrl, $width, $height) {
+    background-image: url($url);
+    @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+        & {
+            background-image: url($retinaUrl);
+            -webkit-background-size: $width $height;
+        }
+    }
+}

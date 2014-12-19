@@ -1,0 +1,205 @@
+@import '_variables';
+@import '_mixins';
+
+@include respond-to(mobile){
+	body{ font-size:14px; }
+	.flexDir{
+		display: -webkit-box;
+	    display: -moz-box;
+	    display: -ms-flexbox;
+	    display: -webkit-flex;
+	    display: flex;
+	    -webkit-box-orient: vertical;
+	    -moz-box-orient: vertical;
+	    -webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	    flex-direction: column;
+	    /* optional */
+	    -webkit-box-align: start;
+	    -moz-box-align: start;
+	    -ms-flex-align: start;
+	    -webkit-align-items: flex-start;
+	    align-items: flex-start;
+	}
+	.wrapper{ width:auto; @include clearfix(); @extend .flexDir; }
+	#homeSlider{ width:100%; margin-top:0; }
+	#sliderNav{ display:none; }
+	.bgGrey{ background: #ecf0f1; }
+	.content{ margin-top:0; }
+	.btmBox.graph{ display:none; }
+	.twitter .tweet{ display:none; }
+	.socialLinks, .navigationLobby, .additionalLinks{ display:none; }
+	.adminBar{
+		background: #FFF;
+		.floatRight{ float:none; }
+	}
+	.postVideoObjectEmbed.embed-container iframe{ width:100%; }
+	#searchContainer{ 
+		@include clearfix(); padding:20px 30px; position:relative;
+		#txtContent{ border:none; border-bottom:1px solid #d4dbdd; width:80%; }
+		#submitButtons{ border:none; position:absolute; right:30px; }
+	}
+	#header{ display: none; }
+	.nav{ display:none; }
+	#upnlSearchBox{ float:none; }
+	.postImageBanner{ width:100%; }
+	.mediaImage{ width:100%; height:auto; }
+	.btmBox.twitter{ 
+		width:100%; 
+		a.button{
+			margin-top:15px; margin-bottom:15px;
+			&.followUs{ 
+				width:49%; height:36px; margin:15px 1% 15px 0; float:left; line-height: 24px;
+				background: url(../Images/mobile-twiter-bg.png) no-repeat;
+			}
+		}
+		.footerFacebook{ 
+			width:49%; margin:0 0 0 1%;
+			strong{ display:none; }
+			a.button.likeUs{ 
+				background: url(../Images/mobile-facebook-bg.png) no-repeat; height:36px; 
+				line-height: 24px; 
+			}
+			&.activeTeamFacebook{
+				width:100%; margin-top:10px;
+				&:before{ 
+					content:"Latest from our Get Active Team"; 
+					text-align: center; display:block; font-size:1.46em;
+					font-family: "Schoolbell", Arial, Verdana, cursive;
+				}
+			}
+		}
+		h3{ text-align: center; background: transparent; }
+	}
+	.hmBox{ 
+		padding:0; width:48%; height:320px; margin-left:1%; margin-right:1%; 
+		.summary{ margin-top:10px; }
+		.summary, .title{ padding:0 15px; }
+		.section{ padding:10px 15px; font-family: "Schoolbell", Arial, Verdana, cursive; }
+		img{ width:100%; }
+	}
+	.footer{
+		position:relative; float:none;
+
+		.wrapper{ 
+			height:135px; 
+			span{ 
+				display:block; position:absolute; width:50%; left:50%; 
+				&:nth-child(2){ top:65px; }
+				&:nth-child(3){ top:95px; }
+				&:nth-child(5){ top:130px; }
+				&:nth-child(6){ left:15px; top:20px; }
+			}
+			p{
+				position:absolute; top:0; left:0; height:50%;
+				a{ 
+					display:block; border:none; margin-bottom: 15px; margin-left:15px; 
+					&:first-child{ margin-top:40px; }
+				}
+			} 
+		}
+	}
+	.donateWays{ 
+		width:100%; 
+		background: transparent;
+		border: none;
+		padding:0;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		-ms-border-radius: 0;
+		-o-border-radius: 0;
+		border-radius: 0;
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		-ms-box-shadow: none;
+		-o-bbox-shadow: none;
+		box-shadow: none;
+		h2{ text-align: center; font-family: "Schoolbell", Arial, Verdana, cursive; }
+		.donateButtons{ 
+			text-align: center;
+			@include clearfix(); 
+			a{ 
+				zoom:0.8; 
+				float:none; display: inline-block;
+				&.sing-to-save-young-lives{}
+				&.will{}
+				&.in-memory{}
+				&.giveasyoulive{}
+				&.cheekymonkey{}
+				&.btn6{}
+			}
+		}
+		.slideDonate{
+			background: transparent; padding:15px 15px 0 15px; margin-bottom:0;
+			.c2aButton, .c2aButton:hover{ width:315px; margin:0 auto 35px auto; }
+		}
+	}
+	.facebookLike{ @include clearfix(); height:60px; overflow: hidden; }
+	.postItem{ margin:0; padding:0; }
+	.postColumnMainLeft{ 
+		width:auto; float:none; padding:0 20px; margin:0; 
+		-webkit-box-ordinal-group: 1;
+	    -moz-box-ordinal-group: 1;
+	    -ms-flex-order: 1;
+	    -webkit-order: 1;
+	    order: 1;
+	    table{ max-width: 320px; margin:0 auto; }
+		.landing_page_table{
+			width:auto;
+			td{ 
+				display:block; margin-bottom:20px;
+				&.empty_cell{ display:none; }
+				.post_link{ display:block; text-align: center; }
+				.mediaImage{ margin-bottom:10px; }
+			}
+		}
+	}
+	#tablePost{
+		.landing_page_table{ width:auto !important; height:auto !important; }
+	}
+	div.navigationBreadCrumb{
+		width:auto; float:none;
+		ul{ @include clearfix(); }
+	}
+	.related_links_header{ display:block; float:none; margin:15px 0; width:auto; }
+	.related_links_list{ 
+		display:block; float:none; clear:none; margin:0 0 15px 0; width:auto;
+	} 
+	#homeSlider.fundraisingSlider{ width:auto; float:none; }
+	.featuredFundraising{
+		#homeSlider{
+			li{ position:static !important; }
+		}
+	}
+	#formPanelToolBar{
+		padding:20px;
+		.floatLeft, .floatRight{ float:none; }
+	} 
+	.current-listing{ 
+		width:auto; float:none; margin:0; padding:0 20px; 
+		.pagerContainer{ margin-bottom:20px; }
+		.postItem .floatRight{ float:none; }
+		.textItemBlock, .pageRollContent p{ width:100%; }
+		.textItemBlock .postIntroText{ margin-bottom:15px; }
+	}
+	.challengeCategories ul, 
+	.otherFundraising ul{ 
+		text-align: center; 
+		li{ display:inline-block; float:none; }
+	}
+	.challengeCategories ul li{ margin-bottom:15px; }
+	span.quote{ display:block; margin: 15px 0; float:none; width:auto; }
+	.questionSet {
+		.formColumn2NoWrap, .formColumn1NoWrap{ float:none; margin:0; }
+	}
+	.postColumnLeft{ 
+		width:auto; float:none; padding: 0 20px; 
+		-webkit-box-ordinal-group: 2;
+	    -moz-box-ordinal-group: 2;
+	    -ms-flex-order: 2;
+	    -webkit-order: 2;
+	    order: 2;
+		br{ display:none; }
+		.appeal_container, .detailsPanel, div.postPoll, .latestUpdate{ width:190px; margin: 0 auto 20px auto; }
+	} 
+}

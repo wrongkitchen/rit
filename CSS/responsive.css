@@ -1,0 +1,360 @@
+/**
+*   Author Variables
+*/
+/**
+*   Author Custom Mixins
+*/
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px; }
+
+  .flexDir, .wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /* optional */
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start; }
+
+  .wrapper {
+    width: auto;
+    zoom: 1; }
+    .wrapper:before {
+      content: '';
+      display: block; }
+    .wrapper:after {
+      content: '';
+      display: table;
+      clear: both; }
+
+  #homeSlider {
+    width: 100%;
+    margin-top: 0; }
+
+  #sliderNav {
+    display: none; }
+
+  .bgGrey {
+    background: #ecf0f1; }
+
+  .content {
+    margin-top: 0; }
+
+  .btmBox.graph {
+    display: none; }
+
+  .twitter .tweet {
+    display: none; }
+
+  .socialLinks, .navigationLobby, .additionalLinks {
+    display: none; }
+
+  .adminBar {
+    background: #FFF; }
+    .adminBar .floatRight {
+      float: none; }
+
+  .postVideoObjectEmbed.embed-container iframe {
+    width: 100%; }
+
+  #searchContainer {
+    zoom: 1;
+    padding: 20px 30px;
+    position: relative; }
+    #searchContainer:before {
+      content: '';
+      display: block; }
+    #searchContainer:after {
+      content: '';
+      display: table;
+      clear: both; }
+    #searchContainer #txtContent {
+      border: none;
+      border-bottom: 1px solid #d4dbdd;
+      width: 80%; }
+    #searchContainer #submitButtons {
+      border: none;
+      position: absolute;
+      right: 30px; }
+
+  #header {
+    display: none; }
+
+  .nav {
+    display: none; }
+
+  #upnlSearchBox {
+    float: none; }
+
+  .postImageBanner {
+    width: 100%; }
+
+  .mediaImage {
+    width: 100%;
+    height: auto; }
+
+  .btmBox.twitter {
+    width: 100%; }
+    .btmBox.twitter a.button {
+      margin-top: 15px;
+      margin-bottom: 15px; }
+      .btmBox.twitter a.button.followUs {
+        width: 49%;
+        height: 36px;
+        margin: 15px 1% 15px 0;
+        float: left;
+        line-height: 24px;
+        background: url(../Images/mobile-twiter-bg.png) no-repeat; }
+    .btmBox.twitter .footerFacebook {
+      width: 49%;
+      margin: 0 0 0 1%; }
+      .btmBox.twitter .footerFacebook strong {
+        display: none; }
+      .btmBox.twitter .footerFacebook a.button.likeUs {
+        background: url(../Images/mobile-facebook-bg.png) no-repeat;
+        height: 36px;
+        line-height: 24px; }
+      .btmBox.twitter .footerFacebook.activeTeamFacebook {
+        width: 100%;
+        margin-top: 10px; }
+        .btmBox.twitter .footerFacebook.activeTeamFacebook:before {
+          content: "Latest from our Get Active Team";
+          text-align: center;
+          display: block;
+          font-size: 1.46em;
+          font-family: "Schoolbell", Arial, Verdana, cursive; }
+    .btmBox.twitter h3 {
+      text-align: center;
+      background: transparent; }
+
+  .hmBox {
+    padding: 0;
+    width: 48%;
+    height: 320px;
+    margin-left: 1%;
+    margin-right: 1%; }
+    .hmBox .summary {
+      margin-top: 10px; }
+    .hmBox .summary, .hmBox .title {
+      padding: 0 15px; }
+    .hmBox .section {
+      padding: 10px 15px;
+      font-family: "Schoolbell", Arial, Verdana, cursive; }
+    .hmBox img {
+      width: 100%; }
+
+  .footer {
+    position: relative;
+    float: none; }
+    .footer .wrapper {
+      height: 135px; }
+      .footer .wrapper span {
+        display: block;
+        position: absolute;
+        width: 50%;
+        left: 50%; }
+        .footer .wrapper span:nth-child(2) {
+          top: 65px; }
+        .footer .wrapper span:nth-child(3) {
+          top: 95px; }
+        .footer .wrapper span:nth-child(5) {
+          top: 130px; }
+        .footer .wrapper span:nth-child(6) {
+          left: 15px;
+          top: 20px; }
+      .footer .wrapper p {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50%; }
+        .footer .wrapper p a {
+          display: block;
+          border: none;
+          margin-bottom: 15px;
+          margin-left: 15px; }
+          .footer .wrapper p a:first-child {
+            margin-top: 40px; }
+
+  .donateWays {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-bbox-shadow: none;
+    box-shadow: none; }
+    .donateWays h2 {
+      text-align: center;
+      font-family: "Schoolbell", Arial, Verdana, cursive; }
+    .donateWays .donateButtons {
+      text-align: center;
+      zoom: 1; }
+      .donateWays .donateButtons:before {
+        content: '';
+        display: block; }
+      .donateWays .donateButtons:after {
+        content: '';
+        display: table;
+        clear: both; }
+      .donateWays .donateButtons a {
+        zoom: 0.8;
+        float: none;
+        display: inline-block; }
+    .donateWays .slideDonate {
+      background: transparent;
+      padding: 15px 15px 0 15px;
+      margin-bottom: 0; }
+      .donateWays .slideDonate .c2aButton, .donateWays .slideDonate .c2aButton:hover {
+        width: 315px;
+        margin: 0 auto 35px auto; }
+
+  .facebookLike {
+    zoom: 1;
+    height: 60px;
+    overflow: hidden; }
+    .facebookLike:before {
+      content: '';
+      display: block; }
+    .facebookLike:after {
+      content: '';
+      display: table;
+      clear: both; }
+
+  .postItem {
+    margin: 0;
+    padding: 0; }
+
+  .postColumnMainLeft {
+    width: auto;
+    float: none;
+    padding: 0 20px;
+    margin: 0;
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    order: 1; }
+    .postColumnMainLeft table {
+      max-width: 320px;
+      margin: 0 auto; }
+    .postColumnMainLeft .landing_page_table {
+      width: auto; }
+      .postColumnMainLeft .landing_page_table td {
+        display: block;
+        margin-bottom: 20px; }
+        .postColumnMainLeft .landing_page_table td.empty_cell {
+          display: none; }
+        .postColumnMainLeft .landing_page_table td .post_link {
+          display: block;
+          text-align: center; }
+        .postColumnMainLeft .landing_page_table td .mediaImage {
+          margin-bottom: 10px; }
+
+  #tablePost .landing_page_table {
+    width: auto !important;
+    height: auto !important; }
+
+  div.navigationBreadCrumb {
+    width: auto;
+    float: none; }
+    div.navigationBreadCrumb ul {
+      zoom: 1; }
+      div.navigationBreadCrumb ul:before {
+        content: '';
+        display: block; }
+      div.navigationBreadCrumb ul:after {
+        content: '';
+        display: table;
+        clear: both; }
+
+  .related_links_header {
+    display: block;
+    float: none;
+    margin: 15px 0;
+    width: auto; }
+
+  .related_links_list {
+    display: block;
+    float: none;
+    clear: none;
+    margin: 0 0 15px 0;
+    width: auto; }
+
+  #homeSlider.fundraisingSlider {
+    width: auto;
+    float: none; }
+
+  .featuredFundraising #homeSlider li {
+    position: static !important; }
+
+  #formPanelToolBar {
+    padding: 20px; }
+    #formPanelToolBar .floatLeft, #formPanelToolBar .floatRight {
+      float: none; }
+
+  .current-listing {
+    width: auto;
+    float: none;
+    margin: 0;
+    padding: 0 20px; }
+    .current-listing .pagerContainer {
+      margin-bottom: 20px; }
+    .current-listing .postItem .floatRight {
+      float: none; }
+    .current-listing .textItemBlock, .current-listing .pageRollContent p {
+      width: 100%; }
+    .current-listing .textItemBlock .postIntroText {
+      margin-bottom: 15px; }
+
+  .challengeCategories ul,
+  .otherFundraising ul {
+    text-align: center; }
+    .challengeCategories ul li,
+    .otherFundraising ul li {
+      display: inline-block;
+      float: none; }
+
+  .challengeCategories ul li {
+    margin-bottom: 15px; }
+
+  span.quote {
+    display: block;
+    margin: 15px 0;
+    float: none;
+    width: auto; }
+
+  .questionSet .formColumn2NoWrap, .questionSet .formColumn1NoWrap {
+    float: none;
+    margin: 0; }
+
+  .postColumnLeft {
+    width: auto;
+    float: none;
+    padding: 0 20px;
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2; }
+    .postColumnLeft br {
+      display: none; }
+    .postColumnLeft .appeal_container, .postColumnLeft .detailsPanel, .postColumnLeft div.postPoll, .postColumnLeft .latestUpdate {
+      width: 190px;
+      margin: 0 auto 20px auto; } }
