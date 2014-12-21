@@ -4,9 +4,92 @@
 /**
 *   Author Custom Mixins
 */
-@media screen and (max-width: 600px) {
+.mobileNav {
+  display: none; }
+
+@media screen and (max-width: 1023px) {
+  .mobileNav {
+    display: block;
+    position: relative;
+    height: 120px;
+    background-image: url("/platforms/cwc/Images/logo.jpg");
+    background-position: 15px center;
+    background-repeat: no-repeat;
+    background-size: auto 105px; }
+    .mobileNav .searchBtn {
+      width: 24px;
+      height: 23px;
+      position: absolute;
+      top: 50%;
+      margin-top: -12px;
+      background-image: url("../Images/mobile-search-icon.png");
+      right: 135px; }
+    .mobileNav .menuBtn {
+      position: absolute;
+      width: 97px;
+      height: 20px;
+      background-image: url(../Images/mobile-menu-btn.png);
+      top: 50%;
+      right: 20px;
+      margin-top: -10px;
+      cursor: pointer; }
+    .mobileNav .dropBownMenu {
+      display: none;
+      width: 100%;
+      z-index: 100;
+      position: absolute;
+      top: 100%;
+      background-color: #ecf0f1;
+      zoom: 1; }
+      .mobileNav .dropBownMenu:before {
+        content: '';
+        display: block; }
+      .mobileNav .dropBownMenu:after {
+        content: '';
+        display: table;
+        clear: both; }
+      .mobileNav .dropBownMenu .level_1_menu, .mobileNav .dropBownMenu .level_2_menu {
+        width: 100%; }
+        .mobileNav .dropBownMenu .level_1_menu a, .mobileNav .dropBownMenu .level_2_menu a {
+          padding: 15px 0;
+          border-bottom: 1px solid #d4dadc;
+          margin: 0 30px;
+          display: block;
+          color: #000;
+          font-weight: bold; }
+          .mobileNav .dropBownMenu .level_1_menu a.hasSubLevel, .mobileNav .dropBownMenu .level_2_menu a.hasSubLevel {
+            background-image: url(../Images/mobile-menu-arrow.png);
+            background-repeat: no-repeat;
+            background-position: right center; }
+      .mobileNav .dropBownMenu .level_2_menu {
+        display: none; }
+        .mobileNav .dropBownMenu .level_2_menu a {
+          border: none; }
+        .mobileNav .dropBownMenu .level_2_menu .backBtn {
+          color: #ed0044;
+          padding-left: 25px;
+          border-bottom: 1px solid #d4dadc;
+          background-image: url(../Images/mobile-menuback-btn.png);
+          background-repeat: no-repeat;
+          background-position: left center; }
+      .mobileNav .dropBownMenu .subMenu {
+        display: none; }
+
+  .adminBar {
+    display: none; }
+
   body {
     font-size: 14px; }
+
+  .pageContainer.search .adminBar {
+    display: block; }
+  .pageContainer.search .mobileNav {
+    display: none; }
+
+  .slides .desc {
+    width: 60%; }
+  .slides span.red_button {
+    font-size: .7em; }
 
   .flexDir, .wrapper {
     display: -webkit-box;
@@ -25,6 +108,16 @@
     -ms-flex-align: start;
     -webkit-align-items: flex-start;
     align-items: flex-start; }
+
+  #fdonateButton2 {
+    position: relative; }
+    #fdonateButton2:after {
+      content: "OR";
+      position: absolute;
+      color: #bbcbcf;
+      bottom: -30px;
+      font-size: 0.5em;
+      right: 145px; }
 
   .wrapper {
     width: auto;
@@ -48,7 +141,23 @@
     background: #ecf0f1; }
 
   .content {
-    margin-top: 0; }
+    margin-top: 0;
+    float: none; }
+    .content a.joinTheTeam {
+      margin: 20px auto;
+      float: none; }
+    .content .fundraisingEventsListing a.btn {
+      float: none;
+      margin: 0 auto 14px auto; }
+    .content .otherFundraising a {
+      font-size: 0.76em; }
+    .content a.projectCardFront.eventCard {
+      float: none;
+      height: auto;
+      width: auto;
+      margin-right: 0; }
+      .content a.projectCardFront.eventCard img {
+        width: 100%; }
 
   .btmBox.graph {
     display: none; }
@@ -62,7 +171,8 @@
   .adminBar {
     background: #FFF; }
     .adminBar .floatRight {
-      float: none; }
+      float: none;
+      width: 100%; }
 
   .postVideoObjectEmbed.embed-container iframe {
     width: 100%; }
@@ -78,6 +188,14 @@
       content: '';
       display: table;
       clear: both; }
+    #searchContainer .closeBtn {
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      top: 50%;
+      margin-top: -12.5px;
+      right: 20px;
+      background-image: url(../Images/mobile-search-close.png); }
     #searchContainer #txtContent {
       border: none;
       border-bottom: 1px solid #d4dbdd;
@@ -85,7 +203,8 @@
     #searchContainer #submitButtons {
       border: none;
       position: absolute;
-      right: 30px; }
+      right: 30px;
+      display: none; }
 
   #header {
     display: none; }
@@ -94,41 +213,80 @@
     display: none; }
 
   #upnlSearchBox {
-    float: none; }
+    float: none;
+    width: 100%; }
 
   .postImageBanner {
-    width: 100%; }
+    width: 100%;
+    height: auto; }
 
   .mediaImage {
     width: 100%;
     height: auto; }
 
   .btmBox.twitter {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
     .btmBox.twitter a.button {
       margin-top: 15px;
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      width: 260px; }
+      .btmBox.twitter a.button.likeTeam {
+        display: inline-block;
+        float: none;
+        width: 304px;
+        font-size: .7em;
+        margin-top: 70px; }
       .btmBox.twitter a.button.followUs {
-        width: 49%;
+        width: 240px;
         height: 36px;
         margin: 15px 1% 15px 0;
-        float: left;
+        float: none;
         line-height: 24px;
+        display: inline-block;
+        font-size: 1em;
+        position: relative;
+        padding-left: 20px;
         background: url(../Images/mobile-twiter-bg.png) no-repeat; }
+        .btmBox.twitter a.button.followUs:before {
+          content: " ";
+          width: 19px;
+          height: 19px;
+          position: absolute;
+          top: 50%;
+          margin-top: -9.5px;
+          left: 15px;
+          background-image: url(../Images/mobile-twitter-icon.png); }
     .btmBox.twitter .footerFacebook {
-      width: 49%;
-      margin: 0 0 0 1%; }
+      width: 240px;
+      margin: 0 0 0 1%;
+      float: none;
+      display: inline-block;
+      position: relative; }
+      .btmBox.twitter .footerFacebook:before {
+        content: " ";
+        width: 19px;
+        height: 19px;
+        position: absolute;
+        top: 50%;
+        margin-top: -9.5px;
+        left: 15px;
+        background-image: url(../Images/mobile-facebook-icon.png); }
       .btmBox.twitter .footerFacebook strong {
         display: none; }
       .btmBox.twitter .footerFacebook a.button.likeUs {
         background: url(../Images/mobile-facebook-bg.png) no-repeat;
         height: 36px;
-        line-height: 24px; }
+        line-height: 24px;
+        font-size: 1em;
+        padding-left: 10px; }
       .btmBox.twitter .footerFacebook.activeTeamFacebook {
         width: 100%;
         margin-top: 10px; }
         .btmBox.twitter .footerFacebook.activeTeamFacebook:before {
           content: "Latest from our Get Active Team";
+          top: 30px;
+          width: 100%;
           text-align: center;
           display: block;
           font-size: 1.46em;
@@ -137,12 +295,17 @@
       text-align: center;
       background: transparent; }
 
+  .appealBanner .appealDonate {
+    width: auto;
+    position: static; }
+
   .hmBox {
     padding: 0;
-    width: 48%;
-    height: 320px;
+    width: 98%;
+    height: auto;
     margin-left: 1%;
-    margin-right: 1%; }
+    margin-right: 1%;
+    float: none; }
     .hmBox .summary {
       margin-top: 10px; }
     .hmBox .summary, .hmBox .title {
@@ -155,7 +318,8 @@
 
   .footer {
     position: relative;
-    float: none; }
+    float: none;
+    font-size: 14px; }
     .footer .wrapper {
       height: 135px; }
       .footer .wrapper span {
@@ -190,6 +354,7 @@
     background: transparent;
     border: none;
     padding: 0;
+    zoom: 1;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     -ms-border-radius: 0;
@@ -200,11 +365,21 @@
     -ms-box-shadow: none;
     -o-bbox-shadow: none;
     box-shadow: none; }
+    .donateWays:before {
+      content: '';
+      display: block; }
+    .donateWays:after {
+      content: '';
+      display: table;
+      clear: both; }
     .donateWays h2 {
       text-align: center;
       font-family: "Schoolbell", Arial, Verdana, cursive; }
     .donateWays .donateButtons {
       text-align: center;
+      padding-bottom: 20px;
+      max-width: 550px;
+      margin: 0 auto;
       zoom: 1; }
       .donateWays .donateButtons:before {
         content: '';
@@ -215,19 +390,27 @@
         clear: both; }
       .donateWays .donateButtons a {
         zoom: 0.8;
+        height: 0;
+        overflow: hidden;
         float: none;
-        display: inline-block; }
+        display: inline-block;
+        margin: 0;
+        padding: 70px 10px 60px 10px;
+        width: 147px; }
+        .donateWays .donateButtons a:nth-child(odd) {
+          margin: 0; }
     .donateWays .slideDonate {
       background: transparent;
       padding: 15px 15px 0 15px;
       margin-bottom: 0; }
       .donateWays .slideDonate .c2aButton, .donateWays .slideDonate .c2aButton:hover {
         width: 315px;
-        margin: 0 auto 35px auto; }
+        margin: 0 auto 35px auto;
+        font-size: 1.4em;
+        line-height: 0.7em; }
 
   .facebookLike {
     zoom: 1;
-    height: 60px;
     overflow: hidden; }
     .facebookLike:before {
       content: '';
@@ -236,10 +419,14 @@
       content: '';
       display: table;
       clear: both; }
+    .facebookLike #facebookLike {
+      float: none;
+      margin-top: 35px;
+      margin-bottom: 0px; }
 
   .postItem {
     margin: 0;
-    padding: 0; }
+    padding: 0 0 10px 0; }
 
   .postColumnMainLeft {
     width: auto;
@@ -252,10 +439,14 @@
     -webkit-order: 1;
     order: 1; }
     .postColumnMainLeft table {
-      max-width: 320px;
+      max-width: 80%;
+      width: 100% !important;
       margin: 0 auto; }
+    .postColumnMainLeft .questionSet .formColumn1NoWrap table {
+      margin: 0;
+      max-width: none; }
     .postColumnMainLeft .landing_page_table {
-      width: auto; }
+      width: auto !important; }
       .postColumnMainLeft .landing_page_table td {
         display: block;
         margin-bottom: 20px; }
@@ -309,6 +500,9 @@
     #formPanelToolBar .floatLeft, #formPanelToolBar .floatRight {
       float: none; }
 
+  .current-listing img, .current-listing .pageRollListing img, .current-listing .postBlogItem img {
+    width: 100%; }
+
   .current-listing {
     width: auto;
     float: none;
@@ -332,7 +526,12 @@
       float: none; }
 
   .challengeCategories ul li {
-    margin-bottom: 15px; }
+    margin: 0 auto 15px auto;
+    width: 80%;
+    display: block;
+    float: none; }
+    .challengeCategories ul li img {
+      width: 100%; }
 
   span.quote {
     display: block;
@@ -340,9 +539,30 @@
     float: none;
     width: auto; }
 
-  .questionSet .formColumn2NoWrap, .questionSet .formColumn1NoWrap {
+  .questionSet {
+    padding-bottom: 20px; }
+    .questionSet textarea {
+      display: block;
+      width: 320px; }
+    .questionSet input[type="text"] {
+      width: 320px; }
+    .questionSet .formColumn2NoWrap, .questionSet .formColumn1NoWrap {
+      float: none;
+      margin: 0; }
+
+  .fundraisingEventsListingIntro {
     float: none;
-    margin: 0; }
+    width: auto; }
+
+  .subCatsTabs .tabs {
+    margin-bottom: 10px; }
+    .subCatsTabs .tabs li {
+      width: 49%;
+      margin: 0;
+      text-align: center;
+      padding: 7px 0;
+      border-radius: 8px;
+      margin-bottom: 5px; }
 
   .postColumnLeft {
     width: auto;
@@ -356,5 +576,25 @@
     .postColumnLeft br {
       display: none; }
     .postColumnLeft .appeal_container, .postColumnLeft .detailsPanel, .postColumnLeft div.postPoll, .postColumnLeft .latestUpdate {
-      width: 190px;
-      margin: 0 auto 20px auto; } }
+      width: auto;
+      margin: 0 auto 20px auto; }
+
+  .postColumnRight .appeal_image, .postColumnLeft .appeal_image, .latestUpdate img {
+    width: 100%; }
+
+  .postColumnRight .appeal_container a.awesome, .postColumnLeft .appeal_container a.awesome {
+    width: 180px;
+    height: 20px; }
+
+  .postColumnRight .appeal_container a, .postColumnLeft .appeal_container a, .content .latestUpdate a {
+    width: auto; }
+
+  #demo td {
+    display: block; }
+    #demo td img {
+      width: 100%;
+      height: auto; }
+
+  .blockLink img {
+    width: 100%;
+    height: auto; } }
